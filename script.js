@@ -1,12 +1,36 @@
 var goods = [
   'olut on halpaa',
-
+  'Amazon Prime on vuoden ilmainen opiskelijoille',
+  'ravintoloista voi ostaa alkoholia mukaan',
+  'luennolla on ihan okei juoda olutta',
+  'viini on halpaa',
+  'alkoholi on halpaa',
+  'Saksassa on vuoria',
+  'sää voi olla kaunis marraskuussakin',
+  'opiskelijaruoka maksaa joskus vain euron',
+  'baarit voivat olla auki aamukuuteen asti',
+  'ruokakaupasta saa viiniä',
+  'ruokakaupasta saa väkeviä viinoja',
+  'Saksassa on paljon pieniä leipomoita',
+  'Saksassa on paljon lihakauppoja',
+  ''
 ];
 
 var bads = [
   'kaupat eivät ole auki sunnuntaisin',
   'kaupat sulkeutuvat kello 20:00',
-  'ruoka-annosten kuvaaminen on tekijänoikeusrikos'
+  'ruoka-annosten kuvaaminen on tekijänoikeusrikos',
+  'tavallisesta ruokakaupasta ei saa korianteria',
+  'DHL jättää paketit satunnaiselle naapurille',
+  'DHL ei löydä oikeaa rakennusta',
+  'internet-yhteydet ovat kalliita',
+  'internet-yhteyksissä on datarajoituksia',
+  'TV-lupamaksu on 17,50€/kk',
+  'muuttoilmoitus tehdään konttorissa, jossa odotusajat ovat yleensä tunteja',
+  'opiskelijaruoka on välillä huonompaa kuin Unicafessa',
+  'ilmaisia julkisia vessoja ei ole edes ostoskeskuksissa',
+  'kaikki Saksan televisio-ohjelmat ovat dubattuja tai valmiiksi saksankielisiä',
+  ''
 ];
 
 var imageCount = 40;
@@ -21,18 +45,11 @@ function setImage() {
     .fadeOut(speed*2, function() {
         $(this).css('background-image','url("img/saksa-' + newImgNumber + '.jpg")');
     });
-    //.delay(speed*2)
 
   bool = !bool;
   $('.bg-image-' + bool)
     .css('background-image','url("img/saksa-' + newImgNumber + '.jpg")')
-    //.delay(speed*2)
     .fadeIn(speed*2);
-
-  //var max = newImgNumber + 3 < 22 ? newImgNumber + 3 : 22;
-  //for (var i = newImgNumber; i < max; i++) {
-//    $("<img />").attr("src", 'img/saksa-' + i + '.jpg');
-  //}
 
   setTimeout(setImage, speed*3);
 }
