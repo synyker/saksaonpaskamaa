@@ -1,0 +1,47 @@
+body {
+  background-color: black;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.text-outer-container {
+  display: table;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.text-inner-container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.text {
+  text-align: center;
+  padding: 10px 50px;
+  margin: 0 auto;
+  font-size: 55px;
+  font-weight: 300;
+  text-shadow: -1px -4px 9px #000;
+  color: #fcfcfc;
+  -webkit-animation: zooming 9s infinite;
+  -moz-animation: zooming 9s infinite;
+  -o-animation: zooming 9s infinite;
+  animation: zooming 9s infinite;
+}
+
+p {
+  margin: 25px auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bg-image {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
