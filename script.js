@@ -9,7 +9,7 @@ var bads = [
   'ruoka-annosten kuvaaminen on tekijänoikeusrikos'
 ];
 
-var imageCount = 22;
+var imageCount = 40;
 
 var speed = 1600;
 var bool = true;
@@ -17,7 +17,8 @@ var newImgNumber = 1;
 
 function setImage() {
 
-  newImgNumber = newImgNumber < 22 ? newImgNumber += 1 : 1;
+  newImgNumber = Math.floor(Math.random()*imageCount)+1 //newImgNumber < 22 ? newImgNumber += 1 : 1;
+  $("<img />").attr("src", 'img/saksa-' + newImgNumber + '.jpg');
 
   $('.bg-image-' + bool)
     .fadeOut(speed*2, function() {
@@ -31,10 +32,10 @@ function setImage() {
     //.delay(speed*2)
     .fadeIn(speed*2);
 
-  var max = newImgNumber + 3 < 22 ? newImgNumber + 3 : 22;
-  for (var i = newImgNumber; i < max; i++) {
-    $("<img />").attr("src", 'img/saksa-' + i + '.jpg');
-  }
+  //var max = newImgNumber + 3 < 22 ? newImgNumber + 3 : 22;
+  //for (var i = newImgNumber; i < max; i++) {
+//    $("<img />").attr("src", 'img/saksa-' + i + '.jpg');
+  //}
 
   setTimeout(setImage, speed*3);
 }
