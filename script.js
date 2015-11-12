@@ -13,7 +13,19 @@ var goods = [
   'ruokakaupasta saa väkeviä viinoja',
   'Saksassa on paljon pieniä leipomoita',
   'Saksassa on paljon lihakauppoja',
-  ''
+  'julkinen liikenne toimii loistavasti',
+  'olut maksaa ravintoloissa lähes yhtä paljon kuin vesi',
+  'osavaltioiden sisäinen rajaton julkisten kulkuvälineiden lippu maksaa halvimmillaan alle 9 euroa',
+  'muutaman tunnin matkustamalla pääsee useisiin eri Keski-Euroopan maihin',
+  'HERKULLINEN OLUT',
+  'Oktoberfest',
+  'Saksalainen ruoka on herkullista',
+  'loputon valikoima makkaroita',
+  'kaupungeissa on kauniita kulttuurihistoriallisia rakennuksia',
+  'Alpeille laskettelemaan meneminen maksaa pennosia',
+  'oluen juominen aamiaisella on ihan okei',
+  'Döner on herkullista',
+  'Döner on halpaa',
 ];
 
 var bads = [
@@ -30,7 +42,14 @@ var bads = [
   'opiskelijaruoka on välillä huonompaa kuin Unicafessa',
   'ilmaisia julkisia vessoja ei ole edes ostoskeskuksissa',
   'kaikki Saksan televisio-ohjelmat ovat dubattuja tai valmiiksi saksankielisiä',
-  ''
+  'ravintoloista saa vain pullotettua vettä, ei ollenkaan hanavettä',
+  'vesi maksaa ravintoloissa lähes yhtä paljon kuin olut',
+  'Münchenin kraanavesi maistuu pahalta',
+  'opiskelijaravintoloissa saa vettä ainoastaan pullossa',
+  'yliopistojen lukukausien alkamisajankohdat poikkeavat Suomen yliopistoista',
+  'asuntojen vuokrat ovat kalliita Münchenissä',
+  'kauppojen kassoilla ei ole erillistä lastausaluetta',
+  '"Unfortunately this video is not available in your country"',
 ];
 
 var imageCount = 40;
