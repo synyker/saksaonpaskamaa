@@ -54,7 +54,7 @@ var bads = [
 
 var imageCount = 40;
 
-var speed = 1600;
+var speed = 2000;
 var bool = true;
 var newImgNumber = 1;
 
