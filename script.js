@@ -31,6 +31,11 @@ function setImage() {
     //.delay(speed*2)
     .fadeIn(speed*2);
 
+  var max = newImgNumber + 3 < 22 ? newImgNumber + 3 : 22;
+  for (var i = newImgNumber; i < max; i++) {
+    $("<img />").attr("src", 'img/saksa-' + i + '.jpg');
+  }
+
   setTimeout(setImage, speed*3);
 }
 
