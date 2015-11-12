@@ -17,9 +17,6 @@ var newImgNumber = 1;
 
 function setImage() {
 
-  newImgNumber = Math.floor(Math.random()*imageCount)+1 //newImgNumber < 22 ? newImgNumber += 1 : 1;
-  $("<img />").attr("src", 'img/saksa-' + newImgNumber + '.jpg');
-
   $('.bg-image-' + bool)
     .fadeOut(speed*2, function() {
         $(this).css('background-image','url("img/saksa-' + newImgNumber + '.jpg")');
@@ -53,6 +50,9 @@ function setText() {
       $('.bad').text(bads[newBadNumber]);
     })
 
+  newImgNumber = Math.floor(Math.random()*imageCount)+1 //newImgNumber < 22 ? newImgNumber += 1 : 1;
+  $("<img />").attr("src", 'img/saksa-' + newImgNumber + '.jpg');
+
   setTimeout(setText, speed*3);
 }
 
@@ -60,7 +60,9 @@ $(document).ready(function() {
 
   $('.good').text(goods[Math.floor(Math.random()*goods.length)]);
   $('.bad').text(bads[Math.floor(Math.random()*bads.length)]);
-  $('.bg-image').css('background-image','url("img/saksa-' + (Math.floor(Math.random()*imageCount)+1) + '.jpg")');
+
+  newImgNumber = Math.floor(Math.random()*imageCount)+1;
+  $('.bg-image').css('background-image','url("img/saksa-' + newImgNumber + '.jpg")');
 
   setImage();
   setText();
