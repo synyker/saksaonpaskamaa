@@ -1,6 +1,6 @@
 var goods = [
   'olut on halpaa',
-  
+
 ];
 
 var bads = [
@@ -11,17 +11,25 @@ var bads = [
 
 var imageCount = 22;
 
-var speed = 1200;
+var speed = 1600;
+var bool = true;
+var newImgNumber = 1;
 
 function setImage() {
 
-  var newImgNumber = Math.floor(Math.random()*imageCount)+1;
-  $('.bg-image')
-    .delay(speed*2)
-    .fadeOut(speed, function() {
+  newImgNumber = newImgNumber < 22 ? newImgNumber += 1 : 1;
+
+  $('.bg-image-' + bool)
+    .fadeOut(speed*2, function() {
         $(this).css('background-image','url("img/saksa-' + newImgNumber + '.jpg")');
-    })
-    .fadeIn(speed);
+    });
+    //.delay(speed*2)
+
+  bool = !bool;
+  $('.bg-image-' + bool)
+    .css('background-image','url("img/saksa-' + newImgNumber + '.jpg")')
+    //.delay(speed*2)
+    .fadeIn(speed*2);
 
   setTimeout(setImage, speed*3);
 }

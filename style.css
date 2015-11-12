@@ -37,7 +37,7 @@ p {
   font-weight: bold;
 }
 
-.bg-image {
+.bg-image-true, .bg-image-false {
   background-size: cover;
   position: absolute;
   top: 0;
