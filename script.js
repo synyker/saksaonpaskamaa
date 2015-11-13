@@ -78,7 +78,7 @@ function setImage() {
     imageStack = generateStack(imageCount);
   }
   newImgNumber = imageStack.pop() + 1;
-  $("<img />").attr("src", 'img/saksa-' + newImgNumber + '.jpg');
+  $('<img />').attr('src', 'img/saksa-' + newImgNumber + '.jpg');
 
   setTimeout(setImage, speed*3);
 }
