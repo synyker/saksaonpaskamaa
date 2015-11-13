@@ -48,7 +48,7 @@ var bads = [
   'opiskelijaravintoloissa saa vettä ainoastaan pullossa',
   'yliopistojen lukukausien alkamisajankohdat poikkeavat Suomen yliopistoista',
   'asuntojen vuokrat ovat kalliita Münchenissä',
-  'kauppojen kassoilla ei ole erillistä lastausaluetta',
+  'kauppojen kassoilla ei ole erillistä pakkausaluetta',
   '"Unfortunately this video is not available in your country"',
 ];
 
