@@ -14,7 +14,7 @@ var goods = [
   'Saksassa on paljon pieniä leipomoita',
   'Saksassa on paljon lihakauppoja',
   'julkinen liikenne toimii loistavasti',
-  'olut maksaa ravintoloissa lähes yhtä paljon kuin vesi',
+  'olut maksaa ravintoloissa lähes yhtä vähän kuin vesi',
   'osavaltioiden sisäinen rajaton julkisten kulkuvälineiden lippu maksaa halvimmillaan alle 9 euroa',
   'muutaman tunnin matkustamalla pääsee useisiin eri Keski-Euroopan maihin',
   'HERKULLINEN OLUT',
