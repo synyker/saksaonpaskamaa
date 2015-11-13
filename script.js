@@ -61,14 +61,16 @@ var newImgNumber = 1;
 function setImage() {
 
   $('.bg-image-' + bool)
-    .fadeOut(speed*2, function() {
+    //.delay(speed*2)
+    .fadeOut(speed, function() {
         $(this).css('background-image','url("img/saksa-' + newImgNumber + '.jpg")');
     });
 
   bool = !bool;
   $('.bg-image-' + bool)
     .css('background-image','url("img/saksa-' + newImgNumber + '.jpg")')
-    .fadeIn(speed*2);
+    //.delay(speed*2)
+    .fadeIn(speed);
 
   setTimeout(setImage, speed*3);
 }
@@ -79,9 +81,9 @@ function setText() {
   var newBadNumber = Math.floor(Math.random()*bads.length);
 
   $('.text')
-    .fadeIn(speed)
+    .fadeIn(speed/2)
     .delay(speed*2)
-    .fadeOut(speed, function() {
+    .fadeOut(speed/2, function() {
       $('.good').text(goods[newGoodNumber]);
       $('.bad').text(bads[newBadNumber]);
     })
