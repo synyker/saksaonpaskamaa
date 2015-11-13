@@ -52,16 +52,19 @@ var bads = [
   '"Unfortunately this video is not available in your country"',
 ];
 
+var badStack = [];
+var goodStack = [];
+var imageStack = [];
+
 var imageCount = 40;
 
-var speed = 2000;
+var speed = 2300;
 var bool = true;
 var newImgNumber = 1;
 
 function setImage() {
 
   $('.bg-image-' + bool)
-    //.delay(speed*2)
     .fadeOut(speed, function() {
         $(this).css('background-image','url("img/saksa-' + newImgNumber + '.jpg")');
     });
@@ -69,16 +72,29 @@ function setImage() {
   bool = !bool;
   $('.bg-image-' + bool)
     .css('background-image','url("img/saksa-' + newImgNumber + '.jpg")')
-    //.delay(speed*2)
     .fadeIn(speed);
+
+  if (imageStack.length == 0) {
+    imageStack = generateStack(imageCount);
+  }
+  newImgNumber = imageStack.pop() + 1;
+  $("<img />").attr("src", 'img/saksa-' + newImgNumber + '.jpg');
 
   setTimeout(setImage, speed*3);
 }
 
 function setText() {
 
-  var newGoodNumber = Math.floor(Math.random()*goods.length);
-  var newBadNumber = Math.floor(Math.random()*bads.length);
+  if (goodStack.length == 0) {
+    goodStack = generateStack(goods.length);
+  }
+  var newGoodNumber = goodStack.pop();
+
+
+  if (badStack.length == 0) {
+    badStack = generateStack(bads.length);
+  }
+  var newBadNumber = badStack.pop();
 
   $('.text')
     .fadeIn(speed/2)
@@ -88,19 +104,34 @@ function setText() {
       $('.bad').text(bads[newBadNumber]);
     })
 
-  newImgNumber = Math.floor(Math.random()*imageCount)+1 //newImgNumber < 22 ? newImgNumber += 1 : 1;
-  $("<img />").attr("src", 'img/saksa-' + newImgNumber + '.jpg');
-
   setTimeout(setText, speed*3);
+}
+
+function generateStack(size) {
+
+  var o = [];
+  for (var i = 0; i < size; i++) {
+    o.push(i);
+  }
+
+  for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+  return o;
 }
 
 $(document).ready(function() {
 
-  $('.good').text(goods[Math.floor(Math.random()*goods.length)]);
-  $('.bad').text(bads[Math.floor(Math.random()*bads.length)]);
+  var parameter = parseInt(location.search.split('speed=')[1]);
+  speed = $.isNumeric(parameter) ? parameter : 2300;
+
+  goodStack = generateStack(goods.length);
+  badStack = generateStack(bads.length);
+  imageStack = generateStack(imageCount);
+
+  $('.good').text(goods[goodStack.pop()]);
+  $('.bad').text(bads[badStack.pop()]);
 
   newImgNumber = Math.floor(Math.random()*imageCount)+1;
-  $('.bg-image').css('background-image','url("img/saksa-' + newImgNumber + '.jpg")');
+  $('.bg-image').css('background-image','url("img/saksa-' + (imageStack.pop()+1) + '.jpg")');
 
   setImage();
   setText();
