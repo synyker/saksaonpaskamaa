@@ -56,7 +56,7 @@ var badStack = [];
 var goodStack = [];
 var imageStack = [];
 
-var imageCount = 58;
+var imageCount = 63;
 
 var speed = 2300;
 var bool = true;
@@ -79,6 +79,7 @@ function setImage() {
   }
   newImgNumber = imageStack.pop() + 1;
   $('<img />').attr('src', 'img/saksa-' + newImgNumber + '.jpg');
+
 
   setTimeout(setImage, speed*3);
 }
