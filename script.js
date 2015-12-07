@@ -33,7 +33,7 @@ var goods = [
 
 var bads = [
   'kaupat eivät ole auki sunnuntaisin',
-  'kaupat sulkeutuvat kello 20:00',
+  'kaupat sulkeutuvat Baijerissa kello 20:00',
   'ruoka-annosten kuvaaminen on tekijänoikeusrikos',
   'tavallisesta ruokakaupasta ei saa korianteria',
   'DHL jättää paketit satunnaiselle naapurille',
