@@ -56,7 +56,7 @@ var badStack = [];
 var goodStack = [];
 var imageStack = [];
 
-var imageCount = 63;
+var imageCount = 107;
 
 var speed = 2300;
 var bool = true;
