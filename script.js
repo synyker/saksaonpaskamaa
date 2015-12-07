@@ -26,6 +26,9 @@ var goods = [
   'oluen juominen aamiaisella on ihan okei',
   'Döner on herkullista',
   'Döner on halpaa',
+  'ruokakaupoilla on kattava valikoima paikallisia oluita',
+  'vahvemmat oluet eivät ole välttämättä juuri miedompia kalliimpia',
+  'saksalaiset osaavat käyttäytyä myös juodessaan'
 ];
 
 var bads = [
@@ -50,6 +53,8 @@ var bads = [
   'asuntojen vuokrat ovat kalliita Münchenissä',
   'kauppojen kassoilla ei ole erillistä pakkausaluetta',
   '"Unfortunately this video is not available in your country"',
+  'Reinheitsgebot rajoittaa eri oluttyyppien valmistusta Baijerissa',
+  'saksalainen asiakaspalvelu on vaihtelevan töykeää'
 ];
 
 var badStack = [];
