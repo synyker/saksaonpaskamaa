@@ -63,7 +63,7 @@ var imageStack = [];
 
 var imageCount = 107;
 
-var speed = 2300;
+var speed = 4600;
 var bool = true;
 var newImgNumber = 1;
 
